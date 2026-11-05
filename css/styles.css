@@ -1,0 +1,237 @@
+
+/* ==============================
+   QUELA HOME - ESTILOS GENERALES
+   ============================== */
+
+:root {
+    --color-fondo: #F7F4EE;
+    --color-texto: #46555C;
+    --color-acento: #A9BAC2;
+    --color-blanco: #FFFFFF;
+
+    --radio: 16px;
+    --ancho-maximo: 600px;
+}
+
+/* Reinicio básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* ==============================
+   CONTENEDOR PRINCIPAL
+   ============================== */
+
+.landing {
+    width: 100%;
+    max-width: var(--ancho-maximo);
+    margin: 0 auto;
+    padding: 48px 24px 40px;
+    flex: 1;
+}
+
+/* ==============================
+   PRESENTACIÓN DE LA MARCA
+   ============================== */
+
+.landing__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.landing__logo {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+.landing__title {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2.2rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+
+.landing__description {
+    max-width: 420px;
+    font-size: 1rem;
+    color: var(--color-texto);
+    opacity: 0.85;
+}
+
+/* ==============================
+   IMAGEN DE PRESENTACIÓN
+   ============================== */
+
+.landing__banner {
+    margin-bottom: 36px;
+}
+
+.landing__image {
+    width: 100%;
+    max-height: 300px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: var(--radio);
+}
+
+/* ==============================
+   ENLACES Y REDES SOCIALES
+   ============================== */
+
+.landing__links {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.landing__subtitle {
+    margin-bottom: 8px;
+    text-align: center;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.link-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 56px;
+    padding: 14px 20px;
+
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-acento);
+    border-radius: var(--radio);
+
+    color: var(--color-texto);
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.link-button:hover {
+    background-color: var(--color-acento);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(70, 85, 92, 0.12);
+}
+
+.link-button:focus-visible {
+    outline: 3px solid var(--color-texto);
+    outline-offset: 3px;
+}
+
+/* Botón destacado de Tiendanube */
+.link-button--primary {
+    background-color: var(--color-texto);
+    border-color: var(--color-texto);
+    color: var(--color-blanco);
+}
+
+.link-button--primary:hover {
+    background-color: #35434A;
+    color: var(--color-blanco);
+}
+
+/* ==============================
+   PIE DE PÁGINA
+   ============================== */
+
+.footer {
+    padding: 24px 20px 32px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.footer p {
+    margin-bottom: 6px;
+}
+
+.footer small {
+    font-size: 0.75rem;
+    opacity: 0.75;
+}
+
+/* ==============================
+   ADAPTACIÓN A CELULARES
+   ============================== */
+
+@media (max-width: 480px) {
+
+    .landing {
+        padding: 32px 20px;
+    }
+
+    .landing__logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .landing__title {
+        font-size: 1.9rem;
+    }
+
+    .landing__description {
+        font-size: 0.95rem;
+    }
+
+    .landing__image {
+        max-height: 220px;
+    }
+
+    .link-button {
+        min-height: 54px;
+    }
+}
+
+/* Usuarios con movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .link-button {
+        transition: none;
+    }
+
+    .link-button:hover {
+        transform: none;
+    }
+}

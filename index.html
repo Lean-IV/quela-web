@@ -1,26 +1,130 @@
+
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-AR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quela Home | Próximamente</title>
-  <style>
-    * { box-sizing: border-box; }
-    body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px; background: #F7F4EE; color: #46555C; font-family: Arial, sans-serif; }
-    main { text-align: center; max-width: 520px; }
-    .logo { width: 86px; height: 86px; border-radius: 50%; background: #46555C; color: #F7F4EE; display: grid; place-items: center; font-size: 52px; margin: 0 auto 22px; }
-    h1 { font-size: clamp(32px, 6vw, 46px); margin: 0 0 16px; }
-    p { font-size: 18px; line-height: 1.5; }
-    .pill { display: inline-block; margin-top: 14px; background: #46555C; color: white; padding: 13px 24px; border-radius: 12px; font-weight: bold; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quela Home | Blanquería y productos para el hogar</title>
+
+    <meta
+        name="description"
+        content="Conocé Quela Home. Sábanas, cubrecamas, toallas y productos de blanquería para tu hogar. Visitá nuestra tienda online."
+    >
+
+    <link rel="icon"
+          type="image/png"
+          href="assets/images/favicon.png">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- JavaScript -->
+    <script src="js/main.js" defer></script>
 </head>
+
 <body>
-  <main>
-    <div class="logo" aria-label="Quela">Q</div>
-    <h1>Quela Home</h1>
-    <p>¡Bienvenidos a nuestra tienda!</p>
-    <p>Estamos preparando algo especial para vos.</p>
-    <div class="pill">Próximamente</div>
-  </main>
+
+    <main class="landing">
+
+        <!-- Presentación de la marca -->
+        <header class="landing__header">
+
+            <img
+                class="landing__logo"
+                src="assets/images/logo-circular.png"
+                alt="Logo de Quela Home"
+                width="120"
+                height="120"
+            >
+
+            <h1 class="landing__title">
+                Quela Home
+            </h1>
+
+            <p class="landing__description">
+                Textiles y detalles para hacer de tu casa un hogar.
+            </p>
+
+        </header>
+
+        <!-- Imagen de presentación -->
+        <section class="landing__banner" aria-label="Nuestro hogar">
+
+            <img
+                class="landing__image"
+                src="assets/images/logo-horizontal.png"
+                alt="Productos textiles para el hogar de Quela"
+            >
+
+        </section>
+
+        <!-- Accesos a nuestros canales -->
+        <nav class="landing__links" aria-label="Nuestros canales oficiales">
+
+            <h2 class="landing__subtitle">
+                Encontranos en
+            </h2>
+
+            <a
+                class="link-button link-button--primary"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <span>Nuestra tienda online</span>
+            </a>
+
+            <a
+                class="link-button"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <span>WhatsApp</span>
+            </a>
+
+            <a
+                class="link-button"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <span>Instagram</span>
+            </a>
+
+            <a
+                class="link-button"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <span>Facebook</span>
+            </a>
+
+            <a
+                class="link-button"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <span>TikTok</span>
+            </a>
+
+        </nav>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+
+        <p>Gracias por elegir Quela ♡</p>
+
+        <small>
+            &copy; 2026 Quela Home.
+            Todos los derechos reservados.
+        </small>
+
+    </footer>
+
 </body>
 </html>
